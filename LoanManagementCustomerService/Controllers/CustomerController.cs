@@ -43,7 +43,7 @@ namespace LoanManagementCustomerService.Controllers
         public async Task<IActionResult> Update(int id, CustomerModel customer)
         {
             await _service.UpdateCustomerAsync(id, customer);
-            return NoContent();
+            return Ok();
         }
 
         [HttpPut("delete/{id}")]
@@ -59,7 +59,7 @@ namespace LoanManagementCustomerService.Controllers
             customer.isActive = false;
 
             await _service.UpdateCustomerAsync(id, customer);
-            return NoContent();
+            return Ok();
         }
 
         //HardDelete
