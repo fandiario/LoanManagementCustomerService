@@ -67,7 +67,7 @@ namespace LoanManagementCustomerService.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             await _service.DeleteCustomerAsync(id);
-            return NoContent();
+            return Ok();
         }
     }
 }
